@@ -50,3 +50,6 @@ avgs <- summarise_each(avg_groups, funs(mean))
 colnames(avgs)[3:ncol(avgs)] <- paste0("Average_",colnames(avgs[3:ncol(avgs)]))
 
 final_data2 <- avgs
+
+# final output
+write.table(final_data2,"final_data.txt", row.names=FALSE)
